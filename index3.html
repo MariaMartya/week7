@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title> Сайт</title>
+<head>
+   
+   <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;}
+        .header{
+            text-decoration:underline;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 50%;
+            padding: 20px;
+        }
+        .head{
+            font-family: Gotham Pro;
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 42px;
+            letter-spacing: 0em;
+            text-align: left;
+
+        }
+        .button{
+            background-color: blue;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40% 30% 30%;
+            padding: 20px;
+            grid-template-areas: "main1 aside"
+            "else1 aside"
+            "else2 aside";
+        }
+        .main1{
+            display: grid;
+            grid-area: main1;
+            font-family: Neue Machina;
+            font-size: 160px;
+            font-weight: 700;
+            line-height: 176px;
+            letter-spacing: -5px;
+            text-align: left;
+            font-family: Neue Machina;
+            font-size: 160px;
+            font-weight: 400;
+            line-height: 176px;
+            letter-spacing: -5px;
+            text-align: left;
+
+        }
+
+        .aside{
+            display: grid;
+            grid-area: aside;
+            background-image: url(assets/1-01\ 1.png);
+            width: 500px;
+            height: 500px;
+            background-size: contain;
+            padding: 20px;           
+            angle: -18.46 deg;
+
+        }
+        .else1{
+            display: grid;
+            grid-area: else1;
+            font-family: Gotham Pro;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0px;
+            text-align: left;
+
+        }
+        .else2{
+            display: grid;
+            grid-area: else2;
+            font-family: Gotham Pro;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0px;
+            text-align: left;
+
+        }
+        @media screen and (max-width:1024px)
+    {.aside{display: none;}
+    .main{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, 200px);
+    }
+    .header{
+            text-decoration:underline;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-template-rows:  repeat(3, 200px);
+            padding: 20px;
+    }
+    
+
+   
+
+       
+   </style>
+</head>
+    <body>
+        <div class="header">
+<div class="head">multiTech</div>
+<div class="menu">Новости</div>
+<div class="menu">Услуги</div>
+<div class="menu">Портфолио</div>
+<div class="menu">Лидогенерация</div>
+<div class="menu">Контакты</div>
+<button class="button">Обсудить проект</button>
+</div>
+<div class="main">
+    <div class="main1">MultiTech </div>
+    <div class="else1"> Разработка Сайтов</div>
+    <div class="else2"> Digital</div>
+    <div class="aside"></div>
+</div>
+
+
+    </body>
+
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> Grid</title> 
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+
+
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    width: 100vw;
+    font-size: 1.5em;
+}
+
+.grid-example {
+    display: grid;
+    grid-template: 20% 1fr 25% / 1fr 30%;
+}
+
+.grid-example-header {
+    grid-column: span 2;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+}
+
+.grid-example-main {
+    display: grid;
+    grid-template: 1fr 20% 20% / 1fr 1fr;
+    gap: 1rem;
+    background: beige;
+    padding: 1rem;
+}
+
+.grid-example-footer {
+    grid-column: span 2;
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    gap: 1rem;
+    background: grey;
+    padding: 1rem;
+}
+
+.grid-example-footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background: lightgray;
+    padding: 2rem 1rem;
+}
+
+.grid-example-aside {
+    background: #d0f0ac;
+    padding: 1rem;
+}
+
+.grid-example-content {
+    grid-column: span 2;
+}
+
+[class^="grid-example-block"] {
+    background: bisque;
+    padding: 2rem 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-example-block-3 {
+    grid-column: span 2;
+}
+    </style>
+</head>
+<body class="grid-example">
+<header class="grid-example-header">[Шапка страницы]</header>
+<main class="grid-example-main">
+    <div class="grid-example-content">[Основная часть]</div>
+    <div class="grid-example-block-1">[Еще 1]</div>
+    <div class="grid-example-block-2">[Еще 2]</div>
+    <div class="grid-example-block-3">[Еще 3]</div>
+</main>
+<aside class="grid-example-aside">[Боковая область]</aside>
+<footer class="grid-example-footer">
+    <div>[Секция футера 1]</div>
+    <div>[Секция футера 2]</div>
+    <div>[Секция футера 3]</div>
+    <div>[Секция футера 4]</div>
+</footer>
+</body>
+</html>

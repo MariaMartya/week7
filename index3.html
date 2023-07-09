@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <title> Сайт</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-   
    <style>
     *{
         margin:0;
@@ -87,14 +88,15 @@
             text-align: left;
 
         }
-        @media screen and (max-width:1024px)
+        @media screen and (max-width:896px)
     {.aside{display: none;}
     .main{
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(3, 200px);
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 200px);
     }
+}
     .header{
             text-decoration:underline;
             display: grid;
@@ -102,11 +104,7 @@
             grid-template-rows:  repeat(3, 200px);
             padding: 20px;
     }
-    
-
-   
-
-       
+      
    </style>
 </head>
     <body>
@@ -125,9 +123,6 @@
     <div class="else2"> Digital</div>
     <div class="aside"></div>
 </div>
-
-
-    </body>
-
-
+</body>
 </html>
+
